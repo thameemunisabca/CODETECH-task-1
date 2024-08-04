@@ -1,0 +1,27 @@
+print("Note:while entering values give space after your first value.")
+def num():
+    number1,number2=map(int,input("enter two numbers:").split())
+    return number1,number2
+# print(numbers)
+
+def operation(numbers,choice):
+    if(choice==1):
+        operate=int(numbers[0])+int(numbers[1])
+        print(f"result:{operate}")
+        return operate
+    elif(choice==2):
+        operate=int(numbers[0])-int(numbers[1])
+        print(f"result:{operate}")
+        return operate
+    elif(choice==3):
+        operate=int(numbers[0])*int(numbers[1])
+        print(f"result:{operate}")
+        return operate
+    elif(choice==4):
+        operate=int(numbers[0])/int(numbers[1])
+        print(f"result:{operate}")
+        return operate
+numbers=num() 
+choice=int(input("what operation do you want to perform? '1' for addition,'2' for subtraction,'3' for multiplication,'4' for division "))
+operate=operation(numbers,choice)
+print("THANK YOU FOR USING MY CALCULATOR.")
